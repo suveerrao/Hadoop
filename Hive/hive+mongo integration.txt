@@ -1,0 +1,17 @@
+hive> create external table mongo_users(_id int,name string,age int)
+STORED BY  'org.yong3.hive.mongo.MongoStorageHandler'
+WITH SERDE PROPERTIES ("Mongo.host" ="192.168.0.5","mongo.port"="1121",
+   "mongo.db"="test","mongo.collection"="users");
+
+
+
+hive>create external table mongo_users(_id int,name string,age int)
+STORED BY 'org.yong3.hive.mongo.MongoStorageHandler'
+WITH SERDEPROPERTIES ("Mongo.host"="192.168.0.5","mongo.port"="1121",  
+   "mongo.db"="test","mongo.collection"="users");
+
+
+hive>create external table mongo_users(_id int,name string,age int)
+STORED BY 'org.yong3.hive.mongo.MongoStorageHandler'
+WITH SERDEPROPERTIES("Mongo.host"="192.168.0.5",mongo.port"="1121",
+    "mongo.db"="test","mongo.collection"="users");
